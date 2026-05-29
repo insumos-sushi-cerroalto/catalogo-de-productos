@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insumos Sushi Cerro Alto</title>
+    <meta name="description" content="Catálogo de insumos y suministros para sushi y comida rápida. Abastece tu local con los mejores productos.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#DC2626',
+                        secondary: '#1F2937',
+                        accent: '#F97316',
+                        dark: '#111827',
+                        light: '#F9FAFB'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="icon" href="/images/logo.jpg" type="image/jpeg">
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+        .cart-bounce {
+            animation: bounce 0.3s ease;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        .fade-in {
+            animation: fadeIn 0.3s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .slide-in {
+            animation: slideIn 0.3s ease;
+        }
+        @keyframes slideIn {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+        .hero-bg {
+            background-image: url('/images/logo.jpg');
+            background-size: 200px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body class="font-sans bg-light text-secondary">
+    <!-- Header -->
+    <header class="bg-dark text-white sticky top-0 z-40 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <img src="/images/logo.jpg" alt="Insumos Sushi Cerro Alto" class="w-12 h-12 rounded-full object-cover border-2 border-primary">
+                    <div>
+                        <h1 class="text-lg md:text-xl font-bold leading-tight">Insumos Sushi</h1>
+                        <p class="text-xs text-gray-400">Cerro Alto</p>
+                    </div>
+                </div>
+                <button onclick="toggleCart()" class="relative bg-primary hover:bg-red-700 transition-colors p-2.5 rounded-full">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+                    </svg>
+                    <span id="cart-count" class="absolute -top-1 -right-1 bg-accent text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center hidden">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-dark via-secondary to-dark text-white py-12 md:py-16 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 hero-bg"></div>
+        <div class="max-w-7xl mx-auto px-4 text-center relative z-10">
+            <img src="/images/logo.jpg" alt="Insumos Sushi Cerro Alto" class="w-32 h-32 mx-auto mb-6 rounded-2xl shadow-lg">
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Tu proveedor de confianza</h2>
+            <p class="text-gray-300 text-lg md:text-xl mb-6 max-w-2xl mx-auto">Abastecemos locales de sushi, comida rápida y más con los mejores insumos y precios del mercado.</p>
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
+                    <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                    <span class="text-sm">Los Cerezos 436, Cerro Alto</span>
+                </div>
+                <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
+                    <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <span class="text-sm">Abierto hoy 10:00 - 24:00</span>
+                </div>
+            </div>
+            <div class="flex justify-center gap-4">
+                <a href="https://www.facebook.com/insumossushi.cerroalto?locale=es_LA" target="_blank" class="bg-blue-600 hover:bg-blue-700 p-3 rounded-full transition-colors">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/insumos_de_sushii_/" target="_blank" class="bg-gradient-to-br from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 p-3 rounded-full transition-colors">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <a href="https://wa.me/56982448222" target="_blank" class="bg-green-500 hover:bg-green-600 p-3 rounded-full transition-colors">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notice Banner -->
+    <div class="bg-accent text-white py-3 px-4 text-center">
+        <p class="text-sm md:text-base font-medium">
+            <svg class="w-5 h-5 inline mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M13 3v6h8L11 21v-8H3l10-10z"/>
+            </svg>
+            Solo con retiro • Todos los días de 10:00 a 24:00 hrs
+        </p>
+    </div>
+
+    <!-- Category Filter -->
+    <section class="bg-white shadow-sm sticky top-[60px] z-30">
+        <div class="max-w-7xl mx-auto px-4 py-3">
+            <div class="flex gap-2 overflow-x-auto pb-2 scrollbar-hide" id="category-filters">
+                <button onclick="filterByCategory('todos')" data-category="todos" class="category-btn active flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium bg-primary text-white transition-all">
+                    Todos
+                </button>
+                <button onclick="filterByCategory('algas')" data-category="algas" class="category-btn flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all">
+                    🥬 Algas
+                </button>
+                <button onclick="filterByCategory('arroz')" data-category="arroz" class="category-btn flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all">
+                    🍚 Arroz
+                </button>
+                <button onclick="filterByCategory('proteinas')" data-category="proteinas" class="category-btn flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all">
+                    🦐 Proteínas
+                </button>
+                <button onclick="filterByCategory('salsas')" data-category="salsas" class="category-btn flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all">
+                    🥫 Salsas
+                </button>
+                <button onclick="filterByCategory('quesos')" data-category="quesos" class="category-btn flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all">
+                    🧀 Quesos
+                </button>
+                <button onclick="filterByCategory('congelados')" data-category="congelados" class="category-btn flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all">
+                    ❄️ Congelados
+                </button>
+                <button onclick="filterByCategory('envases')" data-category="envases" class="category-btn flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all">
+                    📦 Envases
+                </button>
+                <button onclick="filterByCategory('utensilios')" data-category="utensilios" class="category-btn flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all">
+                    🥢 Utensilios
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <main class="max-w-7xl mx-auto px-4 py-8">
+        <div class="flex items-center justify-between mb-6">
+            <h3 class="text-2xl font-bold text-dark">Nuestros Productos</h3>
+            <span id="product-count" class="text-sm text-gray-500">33 productos</span>
+        </div>
+        <div id="products-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+            <!-- Products will be injected here -->
+        </div>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-overlay" class="fixed inset-0 bg-black/50 z-50 hidden" onclick="toggleCart()"></div>
+    <aside id="cart-sidebar" class="fixed top-0 right-0 h-full w-full max-w-md bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300">
+        <div class="flex flex-col h-full">
+            <div class="flex items-center justify-between p-4 border-b">
+                <h2 class="text-xl font-bold">Tu Pedido</h2>
+                <button onclick="toggleCart()" class="p-2 hover:bg-gray-100 rounded-full transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div id="cart-items" class="flex-1 overflow-y-auto p-4">
+                <!-- Cart items will be injected here -->
+            </div>
+            <div class="border-t p-4 bg-gray-50">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="text-lg font-medium">Total:</span>
+                    <span id="cart-total" class="text-2xl font-bold text-primary">$0</span>
+                </div>
+                <button onclick="sendWhatsApp()" id="whatsapp-btn" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-6 rounded-xl flex items-center justify-center gap-2 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Enviar Pedido por WhatsApp
+                </button>
+                <p class="text-xs text-gray-500 text-center mt-3">
+                    📍 Retiro en Los Cerezos 436, Cerro Alto
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Floating Cart Button (Mobile) -->
+    <button onclick="toggleCart()" id="floating-cart" class="fixed bottom-6 right-6 bg-primary hover:bg-red-700 text-white p-4 rounded-full shadow-lg z-30 hidden transition-all hover:scale-110">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+        </svg>
+        <span id="floating-cart-count" class="absolute -top-1 -right-1 bg-accent text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">0</span>
+    </button>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-10">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="/images/logo.jpg" alt="Insumos Sushi Cerro Alto" class="w-16 h-16 rounded-xl object-cover">
+                        <h4 class="text-xl font-bold">Insumos Sushi Cerro Alto</h4>
+                    </div>
+                    <p class="text-gray-400 text-sm">Tu proveedor de confianza para insumos de sushi y comida rapida. Abastecemos locales con los mejores productos y precios.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                            Los Cerezos 436, Cerro Alto, Los Álamos
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                            +56 9 8244 8222
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                            Lunes a Domingo: 10:00 - 24:00
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Síguenos</h4>
+                    <div class="flex gap-4">
+                        <a href="https://www.facebook.com/insumossushi.cerroalto?locale=es_LA" target="_blank" class="bg-gray-700 hover:bg-blue-600 p-3 rounded-full transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/insumos_de_sushii_/" target="_blank" class="bg-gray-700 hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-500 p-3 rounded-full transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="https://wa.me/56982448222" target="_blank" class="bg-gray-700 hover:bg-green-500 p-3 rounded-full transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2026 Insumos Sushi Cerro Alto. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Product Data
+        const products = [
+            // Algas
+            { id: 1, name: "Alga Nori x 100 unidades", price: 11000, category: "algas", stock: 10, unit: "pack", image: "/images/products/alga-nori.png" },
+            { id: 2, name: "Alga Nori x 50 unidades", price: 6000, category: "algas", stock: 15, unit: "pack", image: "/images/products/alga-nori.png" },
+            { id: 3, name: "Alga Nori x Unidad", price: 150, category: "algas", stock: 200, unit: "unidad", image: "/images/products/alga-nori-1u.webp" },
+            
+            // Arroz
+            { id: 4, name: "Arroz Valle de Oro 1 Kg", price: 1900, category: "arroz", stock: 30, unit: "kg", image: "/images/products/arroz-valle-de-oro.png" },
+            { id: 5, name: "Arroz Tucapel 2 Kg", price: 3800, category: "arroz", stock: 25, unit: "kg", image: "/images/products/arroz-tucapel.png" },
+            
+            // Proteinas
+            { id: 6, name: "Camarones 36/40 x 1 Kg", price: 8500, category: "proteinas", stock: 12, unit: "kg", image: "/images/products/camarones.png" },
+            { id: 7, name: "Kanikama 500 grs", price: 2000, category: "proteinas", stock: 20, unit: "500g", image: "/images/products/kanikama.png" },
+            
+            // Salsas y Condimentos
+            { id: 8, name: "Bidon de Soya 5 Litros", price: 7500, category: "salsas", stock: 8, unit: "5L", image: "/images/products/soya-pedregal-5litros.png" },
+            { id: 9, name: "Sachets de Soya x 50 unidades", price: 3800, category: "salsas", stock: 15, unit: "pack", image: "/images/products/sachet-de-soya.jpg" },
+            { id: 10, name: "Salsa Soya x Unidad", price: 100, category: "salsas", stock: 300, unit: "unidad", image: "/images/products/sachet-de-soya-1u.jpg" },
+            { id: 11, name: "Salsa Teriyaki x 25 unidades", price: 4200, category: "salsas", stock: 10, unit: "pack", image: "/images/products/sachet-de-teriyaki.jpg" },
+            { id: 12, name: "Salsa Teriyaki x Unidad", price: 150, category: "salsas", stock: 150, unit: "unidad", image: "/images/products/sachet-de-teriyaki-1u.jpg" },
+            { id: 13, name: "Vinagre de Manzana 5 Litros", price: 4900, category: "salsas", stock: 10, unit: "5L", image: "/images/products/vinagre-manzana-5-lt.jpg" },
+            
+            // Quesos
+            { id: 14, name: "Queso Crema Rafulco", price: 11500, category: "quesos", stock: 15, unit: "unidad", image: "/images/products/queso-crema-rafulco.jpg" },
+            { id: 15, name: "Queso Crema Reny Picot", price: 13500, category: "quesos", stock: 12, unit: "unidad", image: "/images/products/queso-crema-renypicot.jpg" },
+            
+            // Congelados
+            { id: 16, name: "Arrolladitos Primavera x 60 unid", price: 5000, category: "congelados", stock: 20, unit: "pack", image: "/images/products/arrolladitos.png" },
+            { id: 17, name: "Empanadas de Queso x 48", price: 5800, category: "congelados", stock: 15, unit: "pack", image: "/images/products/empanadas.png" },
+            { id: 18, name: "Empanadas Jamon-Queso x 48", price: 5800, category: "congelados", stock: 15, unit: "pack", image: "/images/products/empanadas.png" },
+            
+            // Envases
+            { id: 19, name: "Bandeja Transp. 2 Rolls", price: 200, category: "envases", stock: 500, unit: "unidad", image: "/images/products/bandeja-sushi.png" },
+            { id: 20, name: "Bandeja Transp. 3 Rolls", price: 250, category: "envases", stock: 400, unit: "unidad", image: "/images/products/bandeja-sushi.png" },
+            { id: 21, name: "Canoa Completo x Unidad", price: 50, category: "envases", stock: 1000, unit: "unidad", image: "/images/products/canoa.png" },
+            { id: 22, name: "Contenedor Aluminio C30 x 20 unid", price: 4500, category: "envases", stock: 25, unit: "pack", image: "/images/products/contenedor-aluminio.png" },
+            { id: 23, name: "Contenedor Aluminio C40 x 20 unid", price: 7500, category: "envases", stock: 20, unit: "pack", image: "/images/products/contenedor-aluminio.png" },
+            { id: 24, name: "Contenedor Triangular x Unidad", price: 250, category: "envases", stock: 200, unit: "unidad", image: "/images/products/contenedor-triangular.png" },
+            { id: 25, name: "Plato Colacion Marmita x Unidad", price: 230, category: "envases", stock: 300, unit: "unidad", image: "/images/products/plato-colacion.jpg" },
+            { id: 26, name: "Pote Bisagra Ceviche x Unidad", price: 120, category: "envases", stock: 400, unit: "unidad", image: "/images/products/pote-ceviche.png" },
+            { id: 27, name: "Potes de Soya c/Tapa 1,5 x 50 unid", price: 1300, category: "envases", stock: 30, unit: "pack", image: "/images/products/pote-soya.png" },
+            { id: 28, name: "Vaso Kraft Papas Fritas 12oz x Unid", price: 80, category: "envases", stock: 500, unit: "unidad", image: "/images/products/vaso-kraft.png" },
+            { id: 29, name: "Vasos Transp. c/Tapa x 50 unid", price: 4900, category: "envases", stock: 20, unit: "pack", image: "/images/products/vasos-transparentes.avif" },
+            
+            // Utensilios
+            { id: 30, name: "Palitos Sushi x 100 unidades", price: 2500, category: "utensilios", stock: 40, unit: "pack", image: "/images/products/palitos-sushi.webp" },
+            { id: 31, name: "Panko Amarillo 1 Kg", price: 3500, category: "utensilios", stock: 25, unit: "kg", image: "/images/products/panko.png" },
+            { id: 32, name: "Film Alusa 300 metros", price: 7500, category: "utensilios", stock: 15, unit: "rollo", image: "/images/products/film-alusa.png" },
+            { id: 33, name: "Papel Aluminio 100 metros", price: 7500, category: "utensilios", stock: 18, unit: "rollo", image: "/images/products/papel-aluminio.png" },
+            { id: 34, name: "Papel Antigrasa x 50 unid", price: 1800, category: "utensilios", stock: 35, unit: "pack", image: "/images/products/papel-antigrasa.jpeg" },
+        ];
+
+        // Cart State
+        let cart = [];
+        let currentCategory = 'todos';
+
+        // Category Icons
+        const categoryIcons = {
+            algas: '🥬',
+            arroz: '🍚',
+            proteinas: '🦐',
+            salsas: '🥫',
+            quesos: '🧀',
+            congelados: '❄️',
+            envases: '📦',
+            utensilios: '🥢'
+        };
+
+        // Format Price
+        function formatPrice(price) {
+            return '$' + price.toLocaleString('es-CL');
+        }
+
+        // Render Products
+        function renderProducts(category = 'todos') {
+            const grid = document.getElementById('products-grid');
+            const filteredProducts = category === 'todos' 
+                ? products 
+                : products.filter(p => p.category === category);
+            
+            document.getElementById('product-count').textContent = `${filteredProducts.length} productos`;
+            
+            grid.innerHTML = filteredProducts.map(product => {
+                const cartItem = cart.find(item => item.id === product.id);
+                const quantity = cartItem ? cartItem.quantity : 0;
+                const stockClass = product.stock <= 5 ? 'text-red-500' : 'text-green-600';
+                const stockText = product.stock <= 5 ? `¡Solo ${product.stock}!` : `Stock: ${product.stock}`;
+                
+                return `
+                    <div class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden fade-in border border-gray-100">
+                        <div class="bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center h-36 md:h-40 overflow-hidden">
+                            <img src="${product.image}" alt="${product.name}" class="product-image" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <span class="text-5xl hidden">${categoryIcons[product.category]}</span>
+                        </div>
+                        <div class="p-4">
+                            <span class="text-xs font-medium text-gray-400 uppercase tracking-wide">${product.category}</span>
+                            <h4 class="font-semibold text-gray-800 mt-1 text-sm md:text-base leading-tight line-clamp-2 min-h-[2.5rem]">${product.name}</h4>
+                            <div class="flex items-center justify-between mt-2">
+                                <span class="text-xl font-bold text-primary">${formatPrice(product.price)}</span>
+                                <span class="text-xs ${stockClass} font-medium">${stockText}</span>
+                            </div>
+                            <div class="mt-3">
+                                ${quantity === 0 ? `
+                                    <button onclick="addToCart(${product.id})" class="w-full bg-dark hover:bg-gray-700 text-white font-medium py-2.5 px-4 rounded-xl transition-colors flex items-center justify-center gap-2">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                                        </svg>
+                                        Agregar
+                                    </button>
+                                ` : `
+                                    <div class="flex items-center justify-between bg-gray-100 rounded-xl p-1">
+                                        <button onclick="updateQuantity(${product.id}, -1)" class="bg-white hover:bg-gray-50 text-dark font-bold w-10 h-10 rounded-lg transition-colors flex items-center justify-center shadow-sm">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"/>
+                                            </svg>
+                                        </button>
+                                        <span class="font-bold text-lg text-dark">${quantity}</span>
+                                        <button onclick="updateQuantity(${product.id}, 1)" class="bg-primary hover:bg-red-700 text-white font-bold w-10 h-10 rounded-lg transition-colors flex items-center justify-center">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                `}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Filter by Category
+        function filterByCategory(category) {
+            currentCategory = category;
+            
+            // Update button styles
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                if (btn.dataset.category === category) {
+                    btn.classList.remove('bg-gray-100', 'text-gray-700', 'hover:bg-gray-200');
+                    btn.classList.add('bg-primary', 'text-white');
+                } else {
+                    btn.classList.remove('bg-primary', 'text-white');
+                    btn.classList.add('bg-gray-100', 'text-gray-700', 'hover:bg-gray-200');
+                }
+            });
+            
+            renderProducts(category);
+        }
+
+        // Add to Cart
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+            
+            const existingItem = cart.find(item => item.id === productId);
+            
+            if (existingItem) {
+                if (existingItem.quantity < product.stock) {
+                    existingItem.quantity++;
+                }
+            } else {
+                cart.push({ ...product, quantity: 1 });
+            }
+            
+            updateCartUI();
+            renderProducts(currentCategory);
+        }
+
+        // Update Quantity
+        function updateQuantity(productId, delta) {
+            const product = products.find(p => p.id === productId);
+            const item = cart.find(item => item.id === productId);
+            
+            if (!item) return;
+            
+            item.quantity += delta;
+            
+            if (item.quantity <= 0) {
+                cart = cart.filter(i => i.id !== productId);
+            } else if (item.quantity > product.stock) {
+                item.quantity = product.stock;
+            }
+            
+            updateCartUI();
+            renderProducts(currentCategory);
+        }
+
+        // Remove from Cart
+        function removeFromCart(productId) {
+            cart = cart.filter(item => item.id !== productId);
+            updateCartUI();
+            renderProducts(currentCategory);
+        }
+
+        // Update Cart UI
+        function updateCartUI() {
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            
+            // Update counters
+            const cartCount = document.getElementById('cart-count');
+            const floatingCartCount = document.getElementById('floating-cart-count');
+            const floatingCart = document.getElementById('floating-cart');
+            
+            if (totalItems > 0) {
+                cartCount.textContent = totalItems;
+                cartCount.classList.remove('hidden');
+                floatingCartCount.textContent = totalItems;
+                floatingCart.classList.remove('hidden');
+            } else {
+                cartCount.classList.add('hidden');
+                floatingCart.classList.add('hidden');
+            }
+            
+            // Update total
+            document.getElementById('cart-total').textContent = formatPrice(totalPrice);
+            
+            // Update WhatsApp button
+            document.getElementById('whatsapp-btn').disabled = cart.length === 0;
+            
+            // Update cart items
+            const cartItemsContainer = document.getElementById('cart-items');
+            
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = `
+                    <div class="flex flex-col items-center justify-center h-full text-gray-400">
+                        <svg class="w-16 h-16 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                        <p class="text-lg font-medium">Tu carrito está vacío</p>
+                        <p class="text-sm">Agrega productos para hacer tu pedido</p>
+                    </div>
+                `;
+            } else {
+                cartItemsContainer.innerHTML = cart.map(item => `
+                    <div class="flex items-center gap-3 bg-gray-50 rounded-xl p-3 mb-3 fade-in">
+                        <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden">
+                            <img src="${item.image}" alt="${item.name}" class="w-full h-full object-contain p-1" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <span class="text-2xl hidden">${categoryIcons[item.category]}</span>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h4 class="font-medium text-sm text-gray-800 truncate">${item.name}</h4>
+                            <p class="text-primary font-bold">${formatPrice(item.price * item.quantity)}</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <button onclick="updateQuantity(${item.id}, -1)" class="w-8 h-8 bg-white border border-gray-200 rounded-lg flex items-center justify-center hover:bg-gray-100 transition-colors">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"/>
+                                </svg>
+                            </button>
+                            <span class="font-bold w-6 text-center">${item.quantity}</span>
+                            <button onclick="updateQuantity(${item.id}, 1)" class="w-8 h-8 bg-primary text-white rounded-lg flex items-center justify-center hover:bg-red-700 transition-colors">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <button onclick="removeFromCart(${item.id})" class="text-gray-400 hover:text-red-500 transition-colors p-1">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                            </svg>
+                        </button>
+                    </div>
+                `).join('');
+            }
+        }
+
+        // Toggle Cart
+        function toggleCart() {
+            const sidebar = document.getElementById('cart-sidebar');
+            const overlay = document.getElementById('cart-overlay');
+            
+            if (sidebar.classList.contains('translate-x-full')) {
+                sidebar.classList.remove('translate-x-full');
+                overlay.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            } else {
+                sidebar.classList.add('translate-x-full');
+                overlay.classList.add('hidden');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Send WhatsApp
+        function sendWhatsApp() {
+            if (cart.length === 0) return;
+            
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            
+            let message = "🍣 *Hola! Quisiera realizar un pedido.*\n\n";
+            message += "📋 *Detalle de mi pedido:*\n";
+            message += "━━━━━━━━━━━━━━━━━━━━\n";
+            
+            cart.forEach(item => {
+                message += `• ${item.name}\n`;
+                message += `   Cantidad: ${item.quantity} | Subtotal: ${formatPrice(item.price * item.quantity)}\n`;
+            });
+            
+            message += "━━━━━━━━━━━━━━━━━━━━\n";
+            message += `💰 *TOTAL: ${formatPrice(total)}*\n\n`;
+            message += "📍 *Retiro en:* Los Cerezos 436, Cerro Alto\n";
+            message += "¿Me puedes confirmar disponibilidad? ¡Gracias! 🙌";
+            
+            const phoneNumber = "56982448222";
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProducts();
+            updateCartUI();
+        });
+    </script>
+</body>
+</html>
