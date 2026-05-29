@@ -27,7 +27,7 @@
             }
         }
     </script>
-    <link rel="icon" href="/images/logo.jpg" type="image/jpeg">
+    <link rel="icon" href="images/logo.jpg" type="image/jpeg">
     <style>
         * {
             scroll-behavior: smooth;
@@ -54,7 +54,7 @@
             to { transform: translateX(0); }
         }
         .hero-bg {
-            background-image: url('/images/logo.jpg');
+            background-image: url('images/logo.jpg');
             background-size: 200px;
             background-position: center;
             background-repeat: no-repeat;
@@ -73,7 +73,7 @@
         <div class="max-w-7xl mx-auto px-4 py-3">
             <div class="flex items-center justify-between">
                 <div class="flex items-center gap-3">
-                    <img src="/images/logo.jpg" alt="Insumos Sushi Cerro Alto" class="w-12 h-12 rounded-full object-cover border-2 border-primary">
+                    <img src="images/logo.jpg" alt="Insumos Sushi Cerro Alto" class="w-12 h-12 rounded-full object-cover border-2 border-primary">
                     <div>
                         <h1 class="text-lg md:text-xl font-bold leading-tight">Insumos Sushi</h1>
                         <p class="text-xs text-gray-400">Cerro Alto</p>
@@ -93,7 +93,7 @@
     <section class="bg-gradient-to-br from-dark via-secondary to-dark text-white py-12 md:py-16 relative overflow-hidden">
         <div class="absolute inset-0 opacity-10 hero-bg"></div>
         <div class="max-w-7xl mx-auto px-4 text-center relative z-10">
-            <img src="/images/logo.jpg" alt="Insumos Sushi Cerro Alto" class="w-32 h-32 mx-auto mb-6 rounded-2xl shadow-lg">
+            <img src="images/logo.jpg" alt="Insumos Sushi Cerro Alto" class="w-32 h-32 mx-auto mb-6 rounded-2xl shadow-lg">
             <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Tu proveedor de confianza</h2>
             <p class="text-gray-300 text-lg md:text-xl mb-6 max-w-2xl mx-auto">Abastecemos locales de sushi, comida rápida y más con los mejores insumos y precios del mercado.</p>
             <div class="flex flex-wrap justify-center gap-4 mb-8">
@@ -225,7 +225,7 @@
             <div class="grid md:grid-cols-3 gap-8">
                 <div>
                     <div class="flex items-center gap-3 mb-4">
-                        <img src="/images/logo.jpg" alt="Insumos Sushi Cerro Alto" class="w-16 h-16 rounded-xl object-cover">
+                        <img src="images/logo.jpg" alt="Insumos Sushi Cerro Alto" class="w-16 h-16 rounded-xl object-cover">
                         <h4 class="text-xl font-bold">Insumos Sushi Cerro Alto</h4>
                     </div>
                     <p class="text-gray-400 text-sm">Tu proveedor de confianza para insumos de sushi y comida rapida. Abastecemos locales con los mejores productos y precios.</p>
@@ -272,54 +272,54 @@
         // Product Data
         const products = [
             // Algas
-            { id: 1, name: "Alga Nori x 100 unidades", price: 11000, category: "algas", stock: 10, unit: "pack", image: "/images/products/alga-nori.png" },
-            { id: 2, name: "Alga Nori x 50 unidades", price: 6000, category: "algas", stock: 15, unit: "pack", image: "/images/products/alga-nori.png" },
-            { id: 3, name: "Alga Nori x Unidad", price: 150, category: "algas", stock: 200, unit: "unidad", image: "/images/products/alga-nori-1u.webp" },
+            { id: 1, name: "Alga Nori x 100 unidades", price: 11000, category: "algas", stock: 10, unit: "pack", image: "images/products/alga-nori.png" },
+            { id: 2, name: "Alga Nori x 50 unidades", price: 6000, category: "algas", stock: 15, unit: "pack", image: "images/products/alga-nori.png" },
+            { id: 3, name: "Alga Nori x Unidad", price: 150, category: "algas", stock: 200, unit: "unidad", image: "images/products/alga-nori-1u.webp" },
             
             // Arroz
-            { id: 4, name: "Arroz Valle de Oro 1 Kg", price: 1900, category: "arroz", stock: 30, unit: "kg", image: "/images/products/arroz-valle-de-oro.png" },
-            { id: 5, name: "Arroz Tucapel 2 Kg", price: 3800, category: "arroz", stock: 25, unit: "kg", image: "/images/products/arroz-tucapel.png" },
+            { id: 4, name: "Arroz Valle de Oro 1 Kg", price: 1900, category: "arroz", stock: 30, unit: "kg", image: "images/products/arroz-valle-de-oro.png" },
+            { id: 5, name: "Arroz Tucapel 2 Kg", price: 3800, category: "arroz", stock: 25, unit: "kg", image: "images/products/arroz-tucapel.png" },
             
             // Proteinas
-            { id: 6, name: "Camarones 36/40 x 1 Kg", price: 8500, category: "proteinas", stock: 12, unit: "kg", image: "/images/products/camarones.png" },
-            { id: 7, name: "Kanikama 500 grs", price: 2000, category: "proteinas", stock: 20, unit: "500g", image: "/images/products/kanikama.png" },
+            { id: 6, name: "Camarones 36/40 x 1 Kg", price: 8500, category: "proteinas", stock: 12, unit: "kg", image: "images/products/camarones.png" },
+            { id: 7, name: "Kanikama 500 grs", price: 2000, category: "proteinas", stock: 20, unit: "500g", image: "images/products/kanikama.png" },
             
             // Salsas y Condimentos
-            { id: 8, name: "Bidon de Soya 5 Litros", price: 7500, category: "salsas", stock: 8, unit: "5L", image: "/images/products/soya-pedregal-5litros.png" },
-            { id: 9, name: "Sachets de Soya x 50 unidades", price: 3800, category: "salsas", stock: 15, unit: "pack", image: "/images/products/sachet-de-soya.jpg" },
-            { id: 10, name: "Salsa Soya x Unidad", price: 100, category: "salsas", stock: 300, unit: "unidad", image: "/images/products/sachet-de-soya-1u.jpg" },
-            { id: 11, name: "Salsa Teriyaki x 25 unidades", price: 4200, category: "salsas", stock: 10, unit: "pack", image: "/images/products/sachet-de-teriyaki.jpg" },
-            { id: 12, name: "Salsa Teriyaki x Unidad", price: 150, category: "salsas", stock: 150, unit: "unidad", image: "/images/products/sachet-de-teriyaki-1u.jpg" },
-            { id: 13, name: "Vinagre de Manzana 5 Litros", price: 4900, category: "salsas", stock: 10, unit: "5L", image: "/images/products/vinagre-manzana-5-lt.jpg" },
+            { id: 8, name: "Bidon de Soya 5 Litros", price: 7500, category: "salsas", stock: 8, unit: "5L", image: "images/products/soya-pedregal-5litros.png" },
+            { id: 9, name: "Sachets de Soya x 50 unidades", price: 3800, category: "salsas", stock: 15, unit: "pack", image: "images/products/sachet-de-soya.jpg" },
+            { id: 10, name: "Salsa Soya x Unidad", price: 100, category: "salsas", stock: 300, unit: "unidad", image: "images/products/sachet-de-soya-1u.jpg" },
+            { id: 11, name: "Salsa Teriyaki x 25 unidades", price: 4200, category: "salsas", stock: 10, unit: "pack", image: "images/products/sachet-de-teriyaki.jpg" },
+            { id: 12, name: "Salsa Teriyaki x Unidad", price: 150, category: "salsas", stock: 150, unit: "unidad", image: "images/products/sachet-de-teriyaki-1u.jpg" },
+            { id: 13, name: "Vinagre de Manzana 5 Litros", price: 4900, category: "salsas", stock: 10, unit: "5L", image: "images/products/vinagre-manzana-5-lt.jpg" },
             
             // Quesos
-            { id: 14, name: "Queso Crema Rafulco", price: 11500, category: "quesos", stock: 15, unit: "unidad", image: "/images/products/queso-crema-rafulco.jpg" },
-            { id: 15, name: "Queso Crema Reny Picot", price: 13500, category: "quesos", stock: 12, unit: "unidad", image: "/images/products/queso-crema-renypicot.jpg" },
+            { id: 14, name: "Queso Crema Rafulco", price: 11500, category: "quesos", stock: 15, unit: "unidad", image: "images/products/queso-crema-rafulco.jpg" },
+            { id: 15, name: "Queso Crema Reny Picot", price: 13500, category: "quesos", stock: 12, unit: "unidad", image: "images/products/queso-crema-renypicot.jpg" },
             
             // Congelados
-            { id: 16, name: "Arrolladitos Primavera x 60 unid", price: 5000, category: "congelados", stock: 20, unit: "pack", image: "/images/products/arrolladitos.png" },
-            { id: 17, name: "Empanadas de Queso x 48", price: 5800, category: "congelados", stock: 15, unit: "pack", image: "/images/products/empanadas.png" },
-            { id: 18, name: "Empanadas Jamon-Queso x 48", price: 5800, category: "congelados", stock: 15, unit: "pack", image: "/images/products/empanadas.png" },
+            { id: 16, name: "Arrolladitos Primavera x 60 unid", price: 5000, category: "congelados", stock: 20, unit: "pack", image: "images/products/arrolladitos.png" },
+            { id: 17, name: "Empanadas de Queso x 48", price: 5800, category: "congelados", stock: 15, unit: "pack", image: "images/products/empanadas.png" },
+            { id: 18, name: "Empanadas Jamon-Queso x 48", price: 5800, category: "congelados", stock: 15, unit: "pack", image: "images/products/empanadas.png" },
             
             // Envases
-            { id: 19, name: "Bandeja Transp. 2 Rolls", price: 200, category: "envases", stock: 500, unit: "unidad", image: "/images/products/bandeja-sushi.png" },
-            { id: 20, name: "Bandeja Transp. 3 Rolls", price: 250, category: "envases", stock: 400, unit: "unidad", image: "/images/products/bandeja-sushi.png" },
-            { id: 21, name: "Canoa Completo x Unidad", price: 50, category: "envases", stock: 1000, unit: "unidad", image: "/images/products/canoa.png" },
-            { id: 22, name: "Contenedor Aluminio C30 x 20 unid", price: 4500, category: "envases", stock: 25, unit: "pack", image: "/images/products/contenedor-aluminio.png" },
-            { id: 23, name: "Contenedor Aluminio C40 x 20 unid", price: 7500, category: "envases", stock: 20, unit: "pack", image: "/images/products/contenedor-aluminio.png" },
-            { id: 24, name: "Contenedor Triangular x Unidad", price: 250, category: "envases", stock: 200, unit: "unidad", image: "/images/products/contenedor-triangular.png" },
-            { id: 25, name: "Plato Colacion Marmita x Unidad", price: 230, category: "envases", stock: 300, unit: "unidad", image: "/images/products/plato-colacion.jpg" },
-            { id: 26, name: "Pote Bisagra Ceviche x Unidad", price: 120, category: "envases", stock: 400, unit: "unidad", image: "/images/products/pote-ceviche.png" },
-            { id: 27, name: "Potes de Soya c/Tapa 1,5 x 50 unid", price: 1300, category: "envases", stock: 30, unit: "pack", image: "/images/products/pote-soya.png" },
-            { id: 28, name: "Vaso Kraft Papas Fritas 12oz x Unid", price: 80, category: "envases", stock: 500, unit: "unidad", image: "/images/products/vaso-kraft.png" },
-            { id: 29, name: "Vasos Transp. c/Tapa x 50 unid", price: 4900, category: "envases", stock: 20, unit: "pack", image: "/images/products/vasos-transparentes.avif" },
+            { id: 19, name: "Bandeja Transp. 2 Rolls", price: 200, category: "envases", stock: 500, unit: "unidad", image: "images/products/bandeja-sushi.png" },
+            { id: 20, name: "Bandeja Transp. 3 Rolls", price: 250, category: "envases", stock: 400, unit: "unidad", image: "images/products/bandeja-sushi.png" },
+            { id: 21, name: "Canoa Completo x Unidad", price: 50, category: "envases", stock: 1000, unit: "unidad", image: "images/products/canoa.png" },
+            { id: 22, name: "Contenedor Aluminio C30 x 20 unid", price: 4500, category: "envases", stock: 25, unit: "pack", image: "images/products/contenedor-aluminio.png" },
+            { id: 23, name: "Contenedor Aluminio C40 x 20 unid", price: 7500, category: "envases", stock: 20, unit: "pack", image: "images/products/contenedor-aluminio.png" },
+            { id: 24, name: "Contenedor Triangular x Unidad", price: 250, category: "envases", stock: 200, unit: "unidad", image: "images/products/contenedor-triangular.png" },
+            { id: 25, name: "Plato Colacion Marmita x Unidad", price: 230, category: "envases", stock: 300, unit: "unidad", image: "images/products/plato-colacion.jpg" },
+            { id: 26, name: "Pote Bisagra Ceviche x Unidad", price: 120, category: "envases", stock: 400, unit: "unidad", image: "images/products/pote-ceviche.png" },
+            { id: 27, name: "Potes de Soya c/Tapa 1,5 x 50 unid", price: 1300, category: "envases", stock: 30, unit: "pack", image: "images/products/pote-soya.png" },
+            { id: 28, name: "Vaso Kraft Papas Fritas 12oz x Unid", price: 80, category: "envases", stock: 500, unit: "unidad", image: "images/products/vaso-kraft.png" },
+            { id: 29, name: "Vasos Transp. c/Tapa x 50 unid", price: 4900, category: "envases", stock: 20, unit: "pack", image: "images/products/vasos-transparentes.avif" },
             
             // Utensilios
-            { id: 30, name: "Palitos Sushi x 100 unidades", price: 2500, category: "utensilios", stock: 40, unit: "pack", image: "/images/products/palitos-sushi.webp" },
-            { id: 31, name: "Panko Amarillo 1 Kg", price: 3500, category: "utensilios", stock: 25, unit: "kg", image: "/images/products/panko.png" },
-            { id: 32, name: "Film Alusa 300 metros", price: 7500, category: "utensilios", stock: 15, unit: "rollo", image: "/images/products/film-alusa.png" },
-            { id: 33, name: "Papel Aluminio 100 metros", price: 7500, category: "utensilios", stock: 18, unit: "rollo", image: "/images/products/papel-aluminio.png" },
-            { id: 34, name: "Papel Antigrasa x 50 unid", price: 1800, category: "utensilios", stock: 35, unit: "pack", image: "/images/products/papel-antigrasa.jpeg" },
+            { id: 30, name: "Palitos Sushi x 100 unidades", price: 2500, category: "utensilios", stock: 40, unit: "pack", image: "images/products/palitos-sushi.webp" },
+            { id: 31, name: "Panko Amarillo 1 Kg", price: 3500, category: "utensilios", stock: 25, unit: "kg", image: "images/products/panko.png" },
+            { id: 32, name: "Film Alusa 300 metros", price: 7500, category: "utensilios", stock: 15, unit: "rollo", image: "images/products/film-alusa.png" },
+            { id: 33, name: "Papel Aluminio 100 metros", price: 7500, category: "utensilios", stock: 18, unit: "rollo", image: "images/products/papel-aluminio.png" },
+            { id: 34, name: "Papel Antigrasa x 50 unid", price: 1800, category: "utensilios", stock: 35, unit: "pack", image: "images/products/papel-antigrasa.jpeg" },
         ];
 
         // Cart State
