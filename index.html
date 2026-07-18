@@ -73,6 +73,20 @@
             letter-spacing: 0.5px;
             z-index: 10;
         }
+        .new-badge {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            background: linear-gradient(135deg, #10B981 0%, #3B82F6 100%);
+            color: white;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            z-index: 10;
+        }
         .pulse-arrow {
             animation: pulseArrow 2s ease-in-out infinite;
         }
@@ -382,39 +396,43 @@
             // Proteinas - BESTSELLER
             { id: 6, name: "Camarones GAG 36/40 x 1 Kg", price: 8500, category: "proteinas", stock: 10, unit: "kg", image: "images/products/camaron-gap.png", bestseller: true },
             { id: 47, name: "Camarones Jetro 36/40 x 1 Kg", price: 8500, category: "proteinas", stock: 10, unit: "kg", image: "images/products/camaron-jetro.png", bestseller: true },
-            { id: 7, name: "Kanikama 500 grs", price: 2000, category: "proteinas", stock: 10, unit: "500g", image: "images/products/kanikama.jpg" },
+            { id: 53, name: "Camarones Better Food 36/40 x 1 Kg", price: 8500, category: "proteinas", stock: 10, unit: "kg", image: "images/products/camaron-betterfood.jpeg", new: true },
+            { id: 7, name: "Kanikama 500 grs", price: 2000, category: "proteinas", stock: 11, unit: "500g", image: "images/products/kanikama.jpg" },
 
             // Quesos
             { id: 14, name: "Queso Crema Rafulco", price: 11500, category: "quesos", stock: 9, unit: "unidad", image: "images/products/queso-crema-rafulco.jpg", bestseller: true },
             { id: 15, name: "Queso Crema Reny Picot", price: 13500, category: "quesos", stock: 13, unit: "unidad", image: "images/products/queso-crema-renypicot.jpg", bestseller: true },
             
             // Salsas y Condimentos - BESTSELLER
-            { id: 8, name: "Bidon de Soya MaxiFood 5 lts", price: 7500, category: "salsas", stock: 0, unit: "5L", image: "images/products/soya-5litros.png"},
-            { id: 48, name: "Salsa Teriyaki 15 ml x 25 unidades", price: 2500, category: "salsas", stock: 10, unit: "unidad", image: "images/products/sachet-de-teriyaki-eatone.png" },
+            { id: 8, name: "Bidon de Soya MaxiFood 5 lts", price: 7500, category: "salsas", stock: 4, unit: "5L", image: "images/products/soya-5litros.png"},
+            { id: 55, name: "Salsa de Soya 500 cc", price: 1300, category: "salsas", stock: 6, unit: "5L", image: "images/products/salsa-soya-500cc.png", new: true },
+            { id: 54, name: "Sachets de Soya del Pedregal", price: 3300, category: "salsas", stock: 10, unit: "pack", image: "images/products/soya-sachets-pedregal.png", new: true },
+            { id: 48, name: "Sachets de Teriyaki 15 ml x 25 unid.", price: 2500, category: "salsas", stock: 10, unit: "pack", image: "images/products/sachets-de-teriyaki-15ml.png" },
+            { id: 56, name: "Salsa Teriyaki 15 ml x 1 unidad", price: 120, category: "salsas", stock: 300, unit: "unidad", image: "images/products/teriyaki-15ml.png" },
             { id: 9, name: "Sachets de Soya x 50 unidades", price: 3800, category: "salsas", stock: 15, unit: "pack", image: "images/products/sachet-de-soya.jpg", bestseller: true },            
             { id: 10, name: "Sachet de Soya x unidad", price: 100, category: "salsas", stock: 300, unit: "unidad", image: "images/products/sachet-de-soya-1u.jpg" },            
-            { id: 11, name: "Salsa Teriyaki 30 ml x 25 unidades", price: 4200, category: "salsas", stock: 10, unit: "pack", image: "images/products/sachet-de-teriyaki.jpg", bestseller: true },
-            { id: 12, name: "Salsa Teriyaki 30 ml x unidades", price: 200, category: "salsas", stock: 10, unit: "unidad", image: "images/products/sachet-de-teriyaki-1u.jpg" },            
+            { id: 11, name: "Sachets de Teriyaki 30 ml x 25 unid.", price: 4200, category: "salsas", stock: 10, unit: "pack", image: "images/products/sachets-de-teriyaki-30ml.png" },
+            { id: 12, name: "Sachet Teriyaki 30 ml x 1 unidad", price: 200, category: "salsas", stock: 10, unit: "unidad", image: "images/products/teriyaki-30ml.png" },            
             { id: 44, name: "Salsa Agridulce 1 Litro", price: 6500, category: "salsas", stock: 3, unit: "1L", image: "images/products/salsa-agridulce-1lt.jpg" },           
             { id: 50, name: "Salsa Teriyaki 1 Litro", price: 6500, category: "salsas", stock: 3, unit: "1L", image: "images/products/salsa-teriyaki-1lt.png" },                          
-            { id: 43, name: "Sachet de Salsa Acevichada", price: 4500, category: "salsas", stock: 10, unit: "5L", image: "images/products/salsa-acevichada.jpeg" }, 
+            { id: 43, name: "Sachet de Salsa Acevichada", price: 4500, category: "salsas", stock: 10, unit: "5L", image: "images/products/salsa-acevichada.jpeg", new: true }, 
             
             //Conservas
             { id: 31, name: "Panko Amarillo 1 Kg", price: 3500, category: "conservas", stock: 10, unit: "kg", image: "images/products/panko.png", bestseller: true },
             { id: 51, name: "Tempura Mayamoto 1 kg", price: 4300, category: "conservas", stock: 10, unit: "kg", image: "images/products/tempura-mayamoto-1kg.jpg" },
-            { id: 13, name: "Vinagre de Manzana 5 Litros", price: 4900, category: "conservas", stock: 3, unit: "5L", image: "images/products/vinagre-manzana-5-lt.jpg" },
-            { id: 32, name: "Choclito cocktail Doña Alicia 425gr", price: 1600, category: "conservas", stock: 8, unit: "gr", image: "images/products/choclitos-cocktail-dona-alicia.jpg"},
+            { id: 13, name: "Vinagre de Manzana 5 Litros", price: 4900, category: "conservas", stock: 4, unit: "5L", image: "images/products/vinagre-manzana-5-lt.jpg" },
+            { id: 32, name: "Choclito cocktail Doña Alicia 425gr", price: 1600, category: "conservas", stock: 12, unit: "gr", image: "images/products/choclitos-cocktail-dona-alicia.jpg"},
             { id: 33, name: "Palmito rodajas El Buho 400gr", price: 1800, category: "conservas", stock: 10, unit: "gr", image: "images/products/palmito-rodajas-elbuho.jpg"},           
             { id: 34, name: "Palmito mitades El Buho 800gr", price: 3500, category: "conservas", stock: 4, unit: "gr", image: "images/products/palmito-mitades-elbuho.jpg"},
-            { id: 41, name: "Champiñones laminados 400gr Doña Alicia", price: 1600, category: "conservas", stock: 5, unit: "gr", image: "images/products/champiñon-sanambrosio.webp"},
-            { id: 49, name: "Champiñones laminados 400gr Doña Alicia", price: 1600, category: "conservas", stock: 10, unit: "gr", image: "images/products/champinon-laminado-dona-alicia-400gr.png"},
+            { id: 41, name: "Champiñones laminados 400gr San Ambrosio", price: 1600, category: "conservas", stock: 3, unit: "gr", image: "images/products/champiñon-sanambrosio.webp"},
+            { id: 49, name: "Champiñones laminados 400gr Doña Alicia", price: 1600, category: "conservas", stock: 12, unit: "gr", image: "images/products/champinon-laminado-dona-alicia-400gr.png"},
             { id: 42, name: "Champiñones laminados 2840gr", price: 6000, category: "conservas", stock: 6, unit: "gr", image: "images/products/champinon-laminado-dona-alicia.png"},
             
 
             // Utensilios
             { id: 35, name: "Film Alusa 300 metros", price: 7500, category: "utensilios", stock: 15, unit: "rollo", image: "images/products/film-alusa.png" },
-            { id: 36, name: "Papel Aluminio 100 metros", price: 7500, category: "utensilios", stock: 18, unit: "rollo", image: "images/products/papel-aluminio.png" },
-            { id: 37, name: "Papel Antigrasa x 50 unid", price: 1800, category: "utensilios", stock: 35, unit: "pack", image: "images/products/papel-antigrasa.jpeg" },            
+            { id: 36, name: "Papel Aluminio 100 metros", price: 7500, category: "utensilios", stock: 4, unit: "rollo", image: "images/products/papel-aluminio.png" },
+            { id: 37, name: "Papel Antigrasa x 50 unid", price: 1800, category: "utensilios", stock: 15, unit: "pack", image: "images/products/papel-antigrasa.jpeg" },            
             { id: 38, name: "Palitos Sushi x 100 unidades", price: 2500, category: "utensilios", stock: 40, unit: "pack", image: "images/products/palitos-sushi.webp" },
             { id: 39, name: "Esterilla Plana", price: 1500, category: "utensilios", stock: 10, unit: "rollo", image: "images/products/esterilla-plana.jpeg" },
             { id: 40, name: "Esterilla Redonda", price: 1200, category: "utensilios", stock: 10, unit: "rollo", image: "images/products/esterilla-redonda.jpeg" },
@@ -437,10 +455,10 @@
             { id: 25, name: "Plato Colacion Marmita x Unidad", price: 230, category: "envases", stock: 300, unit: "unidad", image: "images/products/plato-colacion.jpg" },
             { id: 26, name: "Pote Bisagra Ceviche x Unidad", price: 120, category: "envases", stock: 400, unit: "unidad", image: "images/products/pote-ceviche.png" },
             { id: 27, name: "Potes de Soya c/Tapa 1,5 x 50 unid", price: 1500, category: "envases", stock: 30, unit: "pack", image: "images/products/pote-soya.png" },
-            { id: 28, name: "Vaso Kraft Papas Fritas 12oz x Unid", price: 80, category: "envases", stock: 500, unit: "unidad", image: "images/products/vaso-kraft.png" },
+            { id: 28, name: "Vaso Kraft Papas Fritas 12oz x Unid", price: 80, category: "envases", stock: 0, unit: "unidad", image: "images/products/vaso-kraft.png" },
             { id: 29, name: "Vasos Transp. c/Tapa x 50 unid", price: 4900, category: "envases", stock: 1, unit: "pack", image: "images/products/vasos-transparentes.avif" },
-            { id: 45, name: "Envase Bote Mediano", price: 1000, category: "envases", stock: 10, unit: "unidad", image: "images/products/envase-bote-mediano.png" },
-            { id: 46, name: "Envase Bote Grande", price: 1500, category: "envases", stock: 10, unit: "unidad", image: "images/products/envase-bote-grande.png" },        
+            { id: 45, name: "Envase Bote Mediano", price: 1000, category: "envases", stock: 2, unit: "unidad", image: "images/products/envase-bote-mediano.png" },
+            { id: 46, name: "Envase Bote Grande", price: 1500, category: "envases", stock: 3, unit: "unidad", image: "images/products/envase-bote-grande.png" },        
         ];
 
         // Cart State
@@ -498,6 +516,7 @@
                 return `
                     <div class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden fade-in border border-gray-100 relative ${product.stock === 0 ? 'opacity-75' : ''}">
                         ${product.bestseller ? '<span class="bestseller-badge">Mas Vendido</span>' : ''}
+                        ${product.new ? '<span class="new-badge">Nuevo</span>' : ''}
                         <div class="bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center h-36 md:h-40 overflow-hidden">
                             <img src="${product.image}" alt="${product.name}" class="product-image ${product.stock === 0 ? 'grayscale' : ''}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
                             <span class="text-5xl hidden">${categoryIcons[product.category]}</span>
