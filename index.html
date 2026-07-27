@@ -740,21 +740,21 @@
             let message = "*Hola! Quisiera realizar un pedido*\n\n";
             
             if (customerName) {
-                message += `👤 *A nombre de:* ${customerName}\n`;
+                message += `*A nombre de:* ${customerName}\n`;
             }
             
-            message += "📋 *Detalle del pedido:*\n";
-            message += "━━━━━━━━━━━━━\n";
+            message += "*Detalle del pedido:*\n";
+            message += "━━━━━━━━━━━━━━\n";
             
             cart.forEach(item => {
                 message += `• ${item.name}\n`;
                 message += `   Cantidad: ${item.quantity} | Subtotal: ${formatPrice(item.price * item.quantity)}\n`;
             });
             
-            message += "━━━━━━━━━━━━━\n";
-            message += `💰 *TOTAL: ${formatPrice(total)}*\n\n`;
-            message += "📍 *Retiro en:* Los Cerezos 436, Cerro Alto\n";
-            message += "¿Me puede confirmar disponibilidad? ¡Gracias! 🙌";
+            message += "━━━━━━━━━━━━━━\n";
+            message += `*TOTAL: ${formatPrice(total)}*\n\n`;
+            message += "*Retiro en:* Los Cerezos 436, Cerro Alto\n";
+            message += "¿Me puede confirmar disponibilidad? ¡Gracias!";
             
             const phoneNumber = "56982448222";
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
