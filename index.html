@@ -385,9 +385,9 @@
         // Product Data with bestseller flag
         const products = [
             // Algas - BESTSELLER
-            { id: 1, name: "Alga Nori x 100 unidades", price: 11000, category: "algas", stock: 1, unit: "pack", image: "images/products/alga-nori.png", bestseller: true },
-            { id: 2, name: "Alga Nori x 50 unidades", price: 6000, category: "algas", stock: 2, unit: "pack", image: "images/products/alga-nori-10u.png",  },
-            { id: 3, name: "Alga Nori x 10 unidades", price: 1500, category: "algas", stock: 100, unit: "unidad", image: "images/products/alga-nori-10u.png", bestseller: true },
+            { id: 1, name: "Alga Nori x 100 unidades", price: 11000, category: "algas", stock: 8, unit: "pack", image: "images/products/alga-nori.png", bestseller: true },
+            { id: 2, name: "Alga Nori x 50 unidades", price: 6000, category: "algas", stock: 400, unit: "pack", image: "images/products/alga-nori-10u.png",  },
+            { id: 3, name: "Alga Nori x 10 unidades", price: 1500, category: "algas", stock: 800, unit: "unidad", image: "images/products/alga-nori-10u.png", bestseller: true },
             
             // Arroz
             { id: 5, name: "Arroz Tucapel 2 Kg", price: 3800, category: "arroz", stock: 12, unit: "kg", image: "images/products/arroz-tucapel-2kg.png" },
@@ -405,11 +405,11 @@
             { id: 15, name: "Queso Crema Reny Picot 1,36 kg", price: 13500, category: "quesos", stock: 7, unit: "unidad", image: "images/products/queso-crema-renypicot.jpg", bestseller: true },
             
             // Salsas y Condimentos - BESTSELLER
-            { id: 8, name: "Bidon de Soya MaxiFood 5 lts", price: 7500, category: "salsas", stock: 4, unit: "5L", image: "images/products/soya-5litros.png"},
+            { id: 8, name: "Bidon de Soya MaxiFood 5 lts", price: 7500, category: "salsas", stock: 5, unit: "5L", image: "images/products/soya-5litros.png"},
             { id: 55, name: "Salsa de Soya 500 cc", price: 1500, category: "salsas", stock: 5, unit: "5L", image: "images/products/salsa-soya-500cc.png", new: true },
             { id: 11, name: "Sachets de Teriyaki 30 ml x 25 unid.", price: 4200, category: "salsas", stock: 10, unit: "pack", image: "images/products/sachets-de-teriyaki-30ml.png" },
-            { id: 12, name: "Sachet Teriyaki 30 ml x 1 unidad", price: 200, category: "salsas", stock: 10, unit: "unidad", image: "images/products/teriyaki-30ml.png" },            
-            { id: 48, name: "Sachets de Teriyaki 15 ml x 25 unid.", price: 2500, category: "salsas", stock: 4, unit: "pack", image: "images/products/sachets-de-teriyaki-15ml.png" },
+            { id: 12, name: "Sachet Teriyaki 30 ml x 1 unidad", price: 200, category: "salsas", stock: 100, unit: "unidad", image: "images/products/teriyaki-30ml.png" },            
+            { id: 48, name: "Sachets de Teriyaki 15 ml x 25 unid.", price: 2500, category: "salsas", stock: 10, unit: "pack", image: "images/products/sachets-de-teriyaki-15ml.png" },
             { id: 56, name: "Salsa Teriyaki 15 ml x 1 unidad", price: 120, category: "salsas", stock: 300, unit: "unidad", image: "images/products/teriyaki-15ml.png" },
             { id: 9, name: "Sachets de Soya x 50 unidades", price: 3800, category: "salsas", stock: 15, unit: "pack", image: "images/products/sachet-de-soya.jpg", bestseller: true },            
             { id: 10, name: "Sachet de Soya x unidad", price: 100, category: "salsas", stock: 300, unit: "unidad", image: "images/products/sachet-de-soya-1u.jpg" },            
@@ -419,10 +419,12 @@
             { id: 50, name: "Salsa Teriyaki 1 Litro", price: 6500, category: "salsas", stock: 4, unit: "1L", image: "images/products/salsa-teriyaki-1lt.png" },                          
             
             //Conservas
+            { id: 61, name: "Combo 1 kg (Temura + Panko) ", price: 7000, category: "conservas", stock: 2, unit: "kg", image: "images/products/tempura-panko.jpg"},
+            { id: 62, name: "Tempura Mayamoto 1 Kg", price: 4200, category: "conservas", stock: 10, unit: "kg", image: "images/products/tempura-mayamoto-1kg.jpg"},            
             { id: 31, name: "Panko Amarillo 1 Kg", price: 3500, category: "conservas", stock: 10, unit: "kg", image: "images/products/panko.png", bestseller: true },
-            { id: 51, name: "Tempura Mayamoto 1 kg", price: 4300, category: "conservas", stock: 2, unit: "kg", image: "images/products/tempura-mayamoto-1kg.jpg" },
-            { id: 13, name: "Vinagre de Manzana 5 Litros", price: 4900, category: "conservas", stock: 4, unit: "5L", image: "images/products/vinagre-manzana-5-lt.jpg" },
-            { id: 32, name: "Choclito cocktail Doña Alicia 425gr", price: 1600, category: "conservas", stock: 0, unit: "gr", image: "images/products/choclitos-cocktail-dona-alicia.jpg"},
+            { id: 63, name: "Panko Amarillo 500gr", price: 2500, category: "conservas", stock: 2, unit: "gr", image: "images/products/panko-500gr.webp"},    
+            { id: 13, name: "Vinagre de Manzana 5 Litros", price: 4900, category: "conservas", stock: 5, unit: "5L", image: "images/products/vinagre-manzana-5-lt.jpg" },
+            { id: 32, name: "Choclito cocktail Doña Alicia 425gr", price: 1600, category: "conservas", stock: 20, unit: "gr", image: "images/products/choclitos-cocktail-dona-alicia.jpg"},
             { id: 33, name: "Palmito rodajas El Buho 400gr", price: 1800, category: "conservas", stock: 10, unit: "gr", image: "images/products/palmito-rodajas-elbuho.png"},           
             { id: 34, name: "Palmito mitades El Buho 800gr", price: 3500, category: "conservas", stock: 4, unit: "gr", image: "images/products/palmito-rodajas-elbuho.png"},
             { id: 41, name: "Champiñones laminados 400gr San Ambrosio", price: 1600, category: "conservas", stock: 3, unit: "gr", image: "images/products/champiñon-sanambrosio.png"},
@@ -446,9 +448,9 @@
             { id: 52, name: "Caja kraft con Ventana 20x25", price: 950, category: "envases", stock: 50, unit: "pack", image: "images/products/caja-kraft.jpeg" },
             
             // Congelados
-            { id: 16, name: "Arrolladitos Primavera x 60 unid", price: 5000, category: "congelados", stock: 20, unit: "pack", image: "images/products/arrolladitos.png" },
-            { id: 17, name: "Empanadas de Queso x 48", price: 5800, category: "congelados", stock: 15, unit: "pack", image: "images/products/empanadas.png" },
-            { id: 18, name: "Empanadas Jamon-Queso x 48", price: 5800, category: "congelados", stock: 12, unit: "pack", image: "images/products/empanadas.png" },
+            { id: 16, name: "Arrolladitos Primavera x 60 unid", price: 5000, category: "congelados", stock: 10, unit: "pack", image: "images/products/arrolladitos.png" },
+            { id: 17, name: "Empanadas de Queso x 48", price: 5800, category: "congelados", stock: 10, unit: "pack", image: "images/products/empanadas.png" },
+            { id: 18, name: "Empanadas Jamon-Queso x 48", price: 5800, category: "congelados", stock: 0, unit: "pack", image: "images/products/empanadas.png" },
 
             // Envases 2
             { id: 21, name: "Canoa Completo x Unidad", price: 50, category: "envases", stock: 500, unit: "unidad", image: "images/products/canoa.jpeg" },
@@ -750,13 +752,13 @@
             
             cart.forEach(item => {
                 message += `• ${item.name}\n`;
-                message += `   Cantidad: ${item.quantity} | Subtotal: ${formatPrice(item.price * item.quantity)}\n`;
+                message += `   Cant: ${item.quantity} | Subtotal: ${formatPrice(item.price * item.quantity)}\n`;
             });
             
             message += "━━━━━━━━━━━━━━\n";
             message += `*TOTAL: ${formatPrice(total)}*\n\n`;
             message += "*Retiro en:* Los Cerezos 436, Cerro Alto\n";
-            message += "¿Me puede confirmar disponibilidad? ¡Gracias!";
+            message += "¿Me puede confirmar disponibilidad por favor?";
             
             const phoneNumber = "56982448222";
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
