@@ -137,11 +137,11 @@
                 </div>
                 
                 <h2 class="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 leading-tight text-balance">
-                    Abastece tu negocio con los mejores insumos
+                    Abastece tu negocio a solo un click. <span class="text-accent">Cotiza y retira al instante</span>
                 </h2>
                 
                 <p class="text-gray-300 text-lg md:text-xl mb-6">
-                    Busca los productos que necesitas, arma tu carrito y cotiza al instante.
+                    Busca los productos que necesitas, arma tu carrito y envianos tu pedido.
                 </p>
                 
                 <div class="flex flex-wrap justify-center gap-3 mb-8">
@@ -164,7 +164,7 @@
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
                         </svg>
-                        Ver Productos y Cotizar
+                        Ver Productos
                     </a>
                 </div>
             </div>
@@ -199,11 +199,11 @@
                 <button onclick="filterByCategory('algas')" data-category="algas" class="category-btn flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all">
                     🥬 Algas
                 </button>
-                <button onclick="filterByCategory('arroz')" data-category="arroz" class="category-btn flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all">
-                    🍚 Arroz
+                <button onclick="filterByCategory('quesos')" data-category="quesos" class="category-btn flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all">
+                    🧀 Quesos
                 </button>
-                <button onclick="filterByCategory('proteinas')" data-category="proteinas" class="category-btn flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all">
-                    🦐 Proteínas
+                <button onclick="filterByCategory('Pankos')" data-category="Pankos" class="category-btn flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all">
+                    🥖 Pankos
                 </button>
                 <button onclick="filterByCategory('conservas')" data-category="conservas" class="category-btn flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all">
                     🫙 Conservas
@@ -211,8 +211,7 @@
                 <button onclick="filterByCategory('salsas')" data-category="salsas" class="category-btn flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all">
                     🥫 Salsas
                 </button>
-                <button onclick="filterByCategory('quesos')" data-category="quesos" class="category-btn flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all">
-                    🧀 Quesos
+                
                 </button>
                 <button onclick="filterByCategory('congelados')" data-category="congelados" class="category-btn flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all">
                     ❄️ Congelados
@@ -393,16 +392,16 @@
             { id: 5, name: "Arroz Tucapel 2 Kg", price: 3800, category: "arroz", stock: 12, unit: "kg", image: "images/products/arroz-tucapel-2kg.png" },
             { id: 58, name: "Arroz Tucapel 1 Kg", price: 2000, category: "arroz", stock: 4, unit: "kg", image: "images/products/arroz-tucapel-1kg.png", new: true },
             
-            // Proteinas - BESTSELLER
-            { id: 6, name: "Camaron Eco Sea Garden 36/40 x 1 kg", price: 8500, category: "proteinas", stock: 0, unit: "kg", image: "images/products/camaron-eco-sea-garden.jpg" },
-            { id: 47, name: "Camaron Jetro 36/40 x 1 Kg", price: 8500, category: "proteinas", stock: 10, unit: "kg", image: "images/products/camaron-jetro.png", bestseller: true },
-            { id: 53, name: "Camaron Better Food 36/40 x 1 Kg", price: 8500, category: "proteinas", stock: 15, unit: "kg", image: "images/products/camaron-betterfood.jpeg", new: true },
-            { id: 7, name: "Kanikama 500 grs", price: 2000, category: "proteinas", stock: 20, unit: "500g", image: "images/products/kanikama.jpg" },
+            // Congelados - Proteinas - BESTSELLER
+            { id: 6, name: "Camaron Eco Sea Garden 36/40 x 1 kg", price: 8500, category: "congelados", stock: 0, unit: "kg", image: "images/products/camaron-eco-sea-garden.jpg" },
+            { id: 47, name: "Camaron Jetro 36/40 x 1 Kg", price: 8500, category: "congelados", stock: 10, unit: "kg", image: "images/products/camaron-jetro.png", bestseller: true },
+            { id: 53, name: "Camaron Better Food 36/40 x 1 Kg", price: 8500, category: "congelados", stock: 15, unit: "kg", image: "images/products/camaron-betterfood.jpeg", new: true },
+            { id: 7, name: "Kanikama 500 grs", price: 2000, category: "congelados", stock: 20, unit: "500g", image: "images/products/kanikama.jpg" },
 
             // Quesos
-            { id: 14, name: "Queso Crema Rafulco 1,36 kg", price: 11500, category: "quesos", stock: 9, unit: "unidad", image: "images/products/queso-crema-rafulco.jpg", bestseller: true },
+            { id: 14, name: "Queso Crema Rafulco 1,36 kg", price: 11500, category: "quesos", stock: 0, unit: "unidad", image: "images/products/queso-crema-rafulco.jpg" },
             { id: 57, name: "Queso Crema Toshiko 1,36 kg", price: 12500, category: "quesos", stock: 10, unit: "unidad", image: "images/products/queso-crema-toshiko.png", new: true },            
-            { id: 15, name: "Queso Crema Reny Picot 1,36 kg", price: 13500, category: "quesos", stock: 2, unit: "unidad", image: "images/products/queso-crema-renypicot.jpg", bestseller: true },
+            { id: 15, name: "Queso Crema Reny Picot 1,36 kg", price: 13500, category: "quesos", stock: 10, unit: "unidad", image: "images/products/queso-crema-renypicot.jpg", bestseller: true },
             
             // Salsas y Condimentos - BESTSELLER
             { id: 8, name: "Bidon de Soya 5 lts", price: 7500, category: "salsas", stock: 5, unit: "5L", image: "images/products/soya-pedregal-5litros.png"},
@@ -410,7 +409,7 @@
             { id: 11, name: "Sachets de Teriyaki 30 ml x 25 unid.", price: 4200, category: "salsas", stock: 10, unit: "pack", image: "images/products/sachets-de-teriyaki-30ml.png" },
             { id: 12, name: "Sachet Teriyaki 30 ml x 1 unidad", price: 200, category: "salsas", stock: 100, unit: "unidad", image: "images/products/teriyaki-30ml.png" },            
             { id: 48, name: "Sachets de Teriyaki 15 ml x 25 unid.", price: 2700, category: "salsas", stock: 10, unit: "pack", image: "images/products/sachets-de-teriyaki-15ml.png" },
-            { id: 56, name: "Salsa Teriyaki 15 ml x 1 unidad", price: 120, category: "salsas", stock: 300, unit: "unidad", image: "images/products/teriyaki-15ml.png" },
+            { id: 56, name: "Salsa Teriyaki 15 ml x 1 unidad", price: 130, category: "salsas", stock: 300, unit: "unidad", image: "images/products/teriyaki-15ml.png" },
             { id: 9, name: "Sachets de Soya x 50 unidades", price: 3800, category: "salsas", stock: 15, unit: "pack", image: "images/products/sachet-de-soya.jpg", bestseller: true },            
             { id: 10, name: "Sachet de Soya x unidad", price: 100, category: "salsas", stock: 300, unit: "unidad", image: "images/products/sachet-de-soya-1u.jpg" },            
             { id: 54, name: "Sachets de Soya del Pedregal", price: 3300, category: "salsas", stock: 10, unit: "pack", image: "images/products/soya-sachets-pedregal.png", new: true },            
@@ -418,26 +417,30 @@
             { id: 44, name: "Salsa Agridulce 1 Litro", price: 6500, category: "salsas", stock: 2, unit: "1L", image: "images/products/salsa-agridulce-1lt.jpg" },           
             { id: 50, name: "Salsa Teriyaki 1 Litro", price: 6500, category: "salsas", stock: 4, unit: "1L", image: "images/products/salsa-teriyaki-1lt.png" },                          
             
+            //Pankos
+            { id: 61, name: "Combo 1 kg (Temura + Panko) ", price: 7000, category: "Pankos", stock: 2, unit: "kg", image: "images/products/tempura-panko.jpg"},
+            { id: 62, name: "Tempura Mayamoto 1 Kg", price: 4200, category: "Pankos", stock: 4, unit: "kg", image: "images/products/tempura-mayamoto-1kg.jpg"},            
+            { id: 65, name: "Panko Amarillo Kaizen 1 Kg", price: 3500, category: "Pankos", stock: 10, unit: "kg", image: "images/products/panko-amarillo-kaizen.jpg", new: true },
+            { id: 31, name: "Panko Amarillo Yumart 1 Kg", price: 3800, category: "Pankos", stock: 10, unit: "kg", image: "images/products/panko-amarillo-yumart.png", bestseller: true },
+            { id: 64, name: "Panko Blanco 1 Kg", price: 3800, category: "Pankos", stock: 10, unit: "kg", image: "images/products/panko-blanco.png", new: true },
+            { id: 63, name: "Panko Amarillo 500gr", price: 2500, category: "Pankos", stock: 0, unit: "gr", image: "images/products/panko-500gr.webp"}, 
+            
             //Conservas
-            { id: 61, name: "Combo 1 kg (Temura + Panko) ", price: 7000, category: "conservas", stock: 2, unit: "kg", image: "images/products/tempura-panko.jpg"},
-            { id: 62, name: "Tempura Mayamoto 1 Kg", price: 4200, category: "conservas", stock: 10, unit: "kg", image: "images/products/tempura-mayamoto-1kg.jpg"},            
-            { id: 31, name: "Panko Amarillo 1 Kg", price: 3800, category: "conservas", stock: 10, unit: "kg", image: "images/products/panko-amarillo.png", bestseller: true },
-            { id: 64, name: "Panko Blanco 1 Kg", price: 3800, category: "conservas", stock: 10, unit: "kg", image: "images/products/panko-blanco.png", new: true },
-            { id: 63, name: "Panko Amarillo 500gr", price: 2500, category: "conservas", stock: 2, unit: "gr", image: "images/products/panko-500gr.webp"},    
-            { id: 13, name: "Vinagre de Manzana 5 Litros", price: 4900, category: "conservas", stock: 5, unit: "5L", image: "images/products/vinagre-manzana-5-lt.jpg" },
+            { id: 13, name: "Vinagre de Manzana 5 Litros", price: 4900, category: "conservas", stock: 4, unit: "5L", image: "images/products/vinagre-manzana-5-lt.jpg" },
+            { id: 67, name: "Vinagre Blanco 5 Litros", price: 4500, category: "conservas", stock: 4, unit: "5L", image: "images/products/vinagre-blanco-5lts.webp" },
             { id: 32, name: "Choclito cocktail Doña Alicia 425gr", price: 1600, category: "conservas", stock: 20, unit: "gr", image: "images/products/choclitos-cocktail-dona-alicia.jpg"},
             { id: 33, name: "Palmito rodajas El Buho 400gr", price: 1800, category: "conservas", stock: 10, unit: "gr", image: "images/products/palmito-rodajas-elbuho.png"},           
             { id: 34, name: "Palmito mitades El Buho 800gr", price: 3500, category: "conservas", stock: 4, unit: "gr", image: "images/products/palmito-rodajas-elbuho.png"},
-            { id: 41, name: "Champiñones laminados 400gr San Ambrosio", price: 1600, category: "conservas", stock: 3, unit: "gr", image: "images/products/champiñon-sanambrosio.png"},
+            { id: 41, name: "Champiñones laminados 400gr San Ambrosio", price: 1600, category: "conservas", stock: 2, unit: "gr", image: "images/products/champiñon-sanambrosio.png"},
             { id: 49, name: "Champiñones laminados 400gr Doña Alicia", price: 1600, category: "conservas", stock: 12, unit: "gr", image: "images/products/champinon-laminado-dona-alicia-400gr.png"},
             { id: 42, name: "Champiñones laminados 2840gr", price: 6000, category: "conservas", stock: 6, unit: "gr", image: "images/products/champinon-laminado-dona-alicia.png"},
             
 
-            // Utensilios
-            { id: 38, name: "Palitos Sushi x 100 unidades", price: 2500, category: "utensilios", stock: 6, unit: "pack", image: "images/products/palitos-sushi.webp" },
+            // Utensilios  
             { id: 35, name: "Film Alusa 300 metros", price: 7500, category: "utensilios", stock: 15, unit: "rollo", image: "images/products/film-alusa.png" },
             { id: 36, name: "Papel Aluminio 100 metros", price: 7500, category: "utensilios", stock: 3, unit: "rollo", image: "images/products/papel-aluminio.png" },
-            { id: 37, name: "Papel Antigrasa x 50 unid", price: 1800, category: "utensilios", stock: 8, unit: "pack", image: "images/products/papel-antigrasa.jpeg" },            
+            { id: 37, name: "Papel Antigrasa x 50 unid", price: 1800, category: "utensilios", stock: 8, unit: "pack", image: "images/products/papel-antigrasa.jpeg" },             
+            { id: 38, name: "Palitos Sushi x 100 unidades", price: 2500, category: "utensilios", stock: 6, unit: "pack", image: "images/products/palitos-sushi.webp" },
             { id: 39, name: "Esterilla Plana", price: 1500, category: "utensilios", stock: 2, unit: "rollo", image: "images/products/esterilla-plana.jpeg" },
             { id: 40, name: "Esterilla Redonda", price: 1200, category: "utensilios", stock: 5, unit: "rollo", image: "images/products/esterilla-redonda.jpeg" },
 
@@ -451,16 +454,17 @@
             // Congelados
             { id: 16, name: "Arrolladitos Primavera x 60 unid", price: 5000, category: "congelados", stock: 10, unit: "pack", image: "images/products/arrolladitos.png" },
             { id: 17, name: "Empanadas de Queso x 48", price: 5800, category: "congelados", stock: 10, unit: "pack", image: "images/products/empanadas.png" },
-            { id: 18, name: "Empanadas Jamon-Queso x 48", price: 5800, category: "congelados", stock: 0, unit: "pack", image: "images/products/empanadas.png" },
+            { id: 18, name: "Empanadas Jamon-Queso x 48", price: 5800, category: "congelados", stock: 6, unit: "pack", image: "images/products/empanadas.png" },
 
             // Envases 2
             { id: 21, name: "Canoa Completo x Unidad", price: 50, category: "envases", stock: 500, unit: "unidad", image: "images/products/canoa.jpeg" },
+            { id: 24, name: "Contenedor Triangular x Unidad", price: 250, category: "envases", stock: 200, unit: "unidad", image: "images/products/contenedor-triangular.png" },
             { id: 22, name: "Contenedor C-30 x 20 unidades", price: 4500, category: "envases", stock: 25, unit: "pack", image: "images/products/contenedor-aluminio.png" },
             { id: 23, name: "Contenedor C-40 x 20 unidades", price: 7500, category: "envases", stock: 20, unit: "pack", image: "images/products/contenedor-aluminio.png" },
-            { id: 24, name: "Contenedor Triangular x Unidad", price: 250, category: "envases", stock: 200, unit: "unidad", image: "images/products/contenedor-triangular.png" },
             { id: 25, name: "Plato Colacion Marmita x Unidad", price: 230, category: "envases", stock: 300, unit: "unidad", image: "images/products/plato-colacion.jpg" },
             { id: 26, name: "Pote Bisagra Ceviche x Unidad", price: 120, category: "envases", stock: 400, unit: "unidad", image: "images/products/pote-ceviche.png" },
-            { id: 27, name: "Potes de Soya c/Tapa 1,5 x 50 unid", price: 1500, category: "envases", stock: 30, unit: "pack", image: "images/products/pote-soya.png" },
+            { id: 27, name: "Potes de Soya c/Tapa 1,5 x 50 unid", price: 1500, category: "envases", stock: 30, unit: "pack", image: "images/products/pote-soya-1,5.png" },
+            { id: 66, name: "Potes de Soya c/Tapa 2,0 x 50 unid", price: 1500, category: "envases", stock: 30, unit: "pack", image: "images/products/pote-soya-2,0.png" },
             { id: 29, name: "Vasos Transp. c/Tapa x 50 unid", price: 4900, category: "envases", stock: 1, unit: "pack", image: "images/products/vasos-transparentes.avif" },
             { id: 45, name: "Envase Bote Mediano", price: 1000, category: "envases", stock: 2, unit: "unidad", image: "images/products/envase-bote-mediano.png" },
             { id: 46, name: "Envase Bote Grande", price: 1500, category: "envases", stock: 3, unit: "unidad", image: "images/products/envase-bote-grande.png" },        
@@ -474,7 +478,7 @@
         const categoryIcons = {
             algas: '',
             arroz: '',
-            proteinas: '',
+            pankos: '',
             salsas: '',
             quesos: '',
             congelados: '',
