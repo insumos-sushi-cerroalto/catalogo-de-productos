@@ -87,6 +87,22 @@
             letter-spacing: 0.5px;
             z-index: 10;
         }
+
+        .offer-badge {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            background: linear-gradient(135deg, #FBBF24 0%, #F97316 100%);
+            color: white;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            z-index: 10;
+        }
+
         .pulse-arrow {
             animation: pulseArrow 2s ease-in-out infinite;
         }
@@ -383,6 +399,9 @@
     <script>
         // Product Data with bestseller flag
         const products = [
+            //Combos
+            { id: 71, name: "Combo Basico para Sushi en Casa", price: 8000, category: "combos", stock: 3, unit: "pack", image: "images/products/combo-basico-para-sushi.png" },
+
             // Algas - BESTSELLER
             { id: 1, name: "Alga Nori x 100 unidades", price: 11000, category: "algas", stock: 8, unit: "pack", image: "images/products/alga-nori.png", bestseller: true },
             { id: 2, name: "Alga Nori x 50 unidades", price: 6000, category: "algas", stock: 400, unit: "pack", image: "images/products/alga-nori-10u.png",  },
@@ -403,7 +422,8 @@
             { id: 14, name: "Queso Crema Rafulco 1,36 kg", price: 11500, category: "quesos", stock: 0, unit: "unidad", image: "images/products/queso-crema-rafulco.jpg" },
             { id: 57, name: "Queso Crema Toshiko 1,36 kg", price: 12500, category: "quesos", stock: 10, unit: "unidad", image: "images/products/queso-crema-toshiko.png", new: true },            
             { id: 15, name: "Queso Crema Reny Picot 1,36 kg", price: 13500, category: "quesos", stock: 10, unit: "unidad", image: "images/products/queso-crema-renypicot.jpg", bestseller: true },
-            
+            { id: 70, name: "Queso Crema Rafulco 190 gr", price: 2500, category: "quesos", stock: 3, unit: "gr", image: "images/products/queso-crema-rafulco-190gr.jpg", new: true },
+
             // Salsas y Condimentos - BESTSELLER
             { id: 8, name: "Bidon de Soya 5 lts", price: 7500, category: "salsas", stock: 5, unit: "5L", image: "images/products/soya-pedregal-5litros.png"},
             { id: 55, name: "Salsa de Soya 500 cc", price: 1500, category: "salsas", stock: 5, unit: "5L", image: "images/products/salsa-soya-500cc.png", new: true },
@@ -424,11 +444,12 @@
             { id: 65, name: "Panko Amarillo Kaizen 1 Kg", price: 3500, category: "Pankos", stock: 10, unit: "kg", image: "images/products/panko-amarillo-kaizen.jpg", new: true },
             { id: 31, name: "Panko Amarillo Yumart 1 Kg", price: 3800, category: "Pankos", stock: 10, unit: "kg", image: "images/products/panko-amarillo-yumart.png", bestseller: true },
             { id: 64, name: "Panko Blanco 1 Kg", price: 3800, category: "Pankos", stock: 10, unit: "kg", image: "images/products/panko-blanco.png", new: true },
-            { id: 63, name: "Panko Amarillo 500gr", price: 2500, category: "Pankos", stock: 0, unit: "gr", image: "images/products/panko-500gr.webp"}, 
+            { id: 63, name: "Panko Amarillo 500gr", price: 2500, category: "Pankos", stock: 3, unit: "gr", image: "images/products/panko-500gr.webp"}, 
             
             //Conservas
             { id: 13, name: "Vinagre de Manzana 5 Litros", price: 4900, category: "conservas", stock: 4, unit: "5L", image: "images/products/vinagre-manzana-5-lt.jpg" },
             { id: 67, name: "Vinagre Blanco 5 Litros", price: 4500, category: "conservas", stock: 4, unit: "5L", image: "images/products/vinagre-blanco-5lts.webp" },
+            { id: 69, name: "Vinagre de Manzana 500 cc", price: 1000, category: "arroz", stock: 3, unit: "cc", image: "images/products/vinagre-manzana-500cc.png", new: true },
             { id: 32, name: "Choclito cocktail Doña Alicia 425gr", price: 1600, category: "conservas", stock: 20, unit: "gr", image: "images/products/choclitos-cocktail-dona-alicia.jpg"},
             { id: 33, name: "Palmito rodajas El Buho 400gr", price: 1800, category: "conservas", stock: 10, unit: "gr", image: "images/products/palmito-rodajas-elbuho.png"},           
             { id: 34, name: "Palmito mitades El Buho 800gr", price: 3500, category: "conservas", stock: 4, unit: "gr", image: "images/products/palmito-rodajas-elbuho.png"},
@@ -457,6 +478,8 @@
             { id: 17, name: "Empanadas de Queso x 48", price: 5800, category: "congelados", stock: 10, unit: "pack", image: "images/products/empanadas.png" },
             { id: 18, name: "Empanadas Jamon-Queso x 48", price: 5800, category: "congelados", stock: 6, unit: "pack", image: "images/products/empanadas.png" },
 
+            { id: 72, name: "Aluminio para Hamburgesas x 30 unid.", price: 2400, category: "utensilios", stock: 20, unit: "pack", image: "images/products/aluminio-hamburgesas.png" },
+
             // Envases 2
             { id: 21, name: "Canoa Completo x Unidad", price: 50, category: "envases", stock: 500, unit: "unidad", image: "images/products/canoa.jpeg" },
             { id: 24, name: "Contenedor Triangular x Unidad", price: 250, category: "envases", stock: 200, unit: "unidad", image: "images/products/contenedor-triangular.png" },
@@ -467,8 +490,8 @@
             { id: 27, name: "Potes de Soya c/Tapa 1,5 x 50 unid", price: 1500, category: "envases", stock: 30, unit: "pack", image: "images/products/pote-soya-1,5.png" },
             { id: 66, name: "Potes de Soya c/Tapa 2,0 x 50 unid", price: 1500, category: "envases", stock: 30, unit: "pack", image: "images/products/pote-soya-2,0.png" },
             { id: 29, name: "Vasos Transp. c/Tapa x 50 unid", price: 4900, category: "envases", stock: 1, unit: "pack", image: "images/products/vasos-transparentes.avif" },
-            { id: 45, name: "Envase Bote Mediano", price: 1000, category: "envases", stock: 2, unit: "unidad", image: "images/products/envase-bote-mediano.png" },
-            { id: 46, name: "Envase Bote Grande", price: 1500, category: "envases", stock: 3, unit: "unidad", image: "images/products/envase-bote-grande.png" },        
+            { id: 45, name: "Envase Bote Mediano", price: 1000, category: "envases", stock: 5, unit: "unidad", image: "images/products/envase-bote-mediano.png" },
+            { id: 46, name: "Envase Bote Grande", price: 1500, category: "envases", stock: 5, unit: "unidad", image: "images/products/envase-bote-grande.png" },        
         ];
 
         // Cart State
@@ -527,6 +550,7 @@
                     <div class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden fade-in border border-gray-100 relative ${product.stock === 0 ? 'opacity-75' : ''}">
                         ${product.bestseller ? '<span class="bestseller-badge">Mas Vendido</span>' : ''}
                         ${product.new ? '<span class="new-badge">Nuevo</span>' : ''}
+                        ${product.offer ? '<span class="offer-badge">Oferta</span>' : ''}
                         <div class="bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center h-36 md:h-40 overflow-hidden">
                             <img src="${product.image}" alt="${product.name}" class="product-image ${product.stock === 0 ? 'grayscale' : ''}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
                             <span class="text-5xl hidden">${categoryIcons[product.category]}</span>
